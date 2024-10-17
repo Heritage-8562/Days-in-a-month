@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(https://i0.wp.com/picjumbo.com/wp-content/uploads/autumn-background-with-space-for-text-and-leaves-around-free-image.jpeg?w=600&quality=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #input {
+            width: 400px;
+            height: 50px;
+        }
+        #divTag{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .butn{
+            padding-top: 20px;
+        }
+        #button{
+            padding: 10px;
+            width: 90px;
+            background-color: rgb(87, 22, 22);
+            color: white;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <input id="input" type="text" placeholder="Input month">
+        <div class="butn">
+        <button id="button" onclick="show()">Enter</button>
+        </div>
+        <div id="divTag"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let input = document.getElementById('input')
+    let button = document.getElementById('button')
+    let divTag = document.getElementById('divTag')
+
+    let string1 = 'Janruary'
+    let string2 = 'February'
+    let string3 = 'March'
+    let string4 = 'April'
+    let string5 = 'May'
+    let string6 = 'June'
+    let string7 = 'July'
+    let string8 = 'August'
+    let string9 = 'September'
+    let string10 = 'October'
+    let string11 = 'November'
+    let string12 = 'December'
+
+    function show() {
+        if (input.value === string1) {
+            alert(`The month of ${string1} has 31 days`)
+        }
+        else if(input.value === string2) {
+            divTag.innerHTML = `The month of ${string2} has 28 days`
+        }
+        else if(input.value === string3) {
+            divTag.innerHTML = `The month of ${string3} has 31 days`
+        }
+        else if(input.value === string4) {
+            divTag.innerHTML = `The month of ${string4} has 30 days`
+        }
+        else if(input.value === string5) {
+            divTag.innerHTML = `The month of ${string5} has 31 days`
+        }
+        else if(input.value === string6) {
+            divTag.innerHTML = `The month of ${string6} has 30 days`
+        }
+        else if(input.value === string7) {
+            divTag.innerHTML = `The month of ${string7} has 31 days`
+        }
+        else if(input.value === string8) {
+            divTag.innerHTML = `The month of ${string8} has 31 days`
+        }
+        else if(input.value === string9) {
+            divTag.innerHTML = `The month of ${string9} has 30 days`
+        }
+        else if(input.value === string10) {
+            divTag.innerHTML = `The month of ${string10} has 31 days`
+        }
+        else if(input.value === string11) {
+            divTag.innerHTML = `The month of ${string11} has 30 days`
+        }
+        else if(input.value === string12) {
+            divTag.innerHTML = `The month of ${string12} has 31 days`
+        }
+        else if(input.value === ''){
+            alert('Input month')
+        }
+        else{
+            alert('Wrong Search')
+        }
+    }
+</script>
